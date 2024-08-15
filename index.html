@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Card</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- <img src="img2.jpg" alt="img2"> -->
+     
+    <div class="card" style="background-image: url('img2.jpg'); background-repeat: no-repeat;background-size: cover;">
+        <p>Wishing you a day filled with love, joy, and all your favorite things.</p>
+        <div id="slide" class="slide">
+            <div class="slide-content">
+                <h2>Happiest birthday Dikku!!❤️</h2>
+                <p>On this special day, I want you to know how much you mean to me. 
+                   You are the light of my life, and I am so grateful to have you by my side.
+                </p>
+                <p>
+                   I wish you all the happiness, joy, and love in the world.
+                   Happy Birthday, my love!
+                </p>+
+                <button class="close-btn" onclick="closeSlide()">Close</button>
+            </div>
+        </div>
+        
+        <h1>Happy Birthday!</h1>
+        <p>Click the button below to watch a special birthday message:</p>
+        <button id="playButton" onclick="playVideo()">Play Video</button>
+        
+        <div id="videoContainer" class="hidden">
+            <video id="birthdayVideo" width="600" controls>
+                <source src="bday.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <script>
+        function closeSlide() {
+            document.getElementById('slide').style.display = 'none';
+        }
+
+        function playVideo() {
+            const videoContainer = document.getElementById('videoContainer');
+            const video = document.getElementById('birthdayVideo');
+            videoContainer.classList.remove('hidden');
+            video.play();
+        }
+    </script>
+</body>
+</html>
